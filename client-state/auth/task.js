@@ -8,10 +8,10 @@ else {
     const formName = document.getElementById('signin__form');
     const submitBtn = document.getElementById('signin__btn');
     submitBtn.addEventListener('click', () => {
-        event.preventDefault();
+        Event.preventDefault();
         const formData = new FormData(formName);
         const request = new XMLHttpRequest();
-        request.open('POST', 'https://netology-slow-rest.herokuapp.com/auth.php');
+        request.open('POST', 'https://students.netoservices.ru/nestjs-backend/auth');
         request.addEventListener('readystatechange', function() {
         if (this.readyState == 4 && this.status == 200) {
             const data = JSON.parse(this.responseText); 
