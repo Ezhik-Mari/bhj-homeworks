@@ -24,5 +24,11 @@ xhr.onreadystatechange = function () {
             item.appendChild(divValue);
             item.appendChild(divCurency);
         }
+
     }
-}
+};
+const createDiv = (name) => {
+    let div = document.createElement('div');
+    div.classList.add(name);
+    return div;
+};
